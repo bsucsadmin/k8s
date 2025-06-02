@@ -33,4 +33,4 @@ kubectl create -f net/flannel-net.yaml
 ```
 
 ### Conclusion
-That should be the default k8s setup that uses the university DHCP. If you have any questions reach out to [Haren](haren.eshwaran@bsu.edu) :)
+That should be the default k8s setup that uses the university DHCP. If you have any questions reach out to [Haren](mailto:haren.eshwaran@bsu.edu) :)
