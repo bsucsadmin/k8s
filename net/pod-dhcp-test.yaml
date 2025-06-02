@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dhcp-pod-test
+  annotations:
+    k8s.v1.cni.cncf.io/networks: dhcp-net  # Attach DHCP network
+spec:
+  containers:
+  - name: dhcp-pod-test
+    image: alpine
+    command: ["/bin/ash", "-c", "trap : TERM INT; sleep infinity & wait"]
