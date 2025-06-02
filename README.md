@@ -11,9 +11,26 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 ```
 You can join your nodes to the cluster after this step
 
+### Setting up NFS
+Use the `nfs/01-setup-nfs-provisioner.yaml` file
+```bash
+kubectl create -f 01-setup-nfs-provisioner.yaml
+```
+
 ### Installing multus-cni
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
 ```
 For multus to work with dhcp you need to run the dhcp daemonset which doesn't run automatically for some reason? If you are using the template in virt-03, the service for it has already been created and it should be running. If you aren't using the template you can find the systemd service and socket files [here](https://github.com/containernetworking/plugins/tree/main/plugins/ipam/dhcp/systemd)
 
+### Setting up the networking
+Use the `net/dhcp-net.yaml` and `net/flannel-net.yaml`
+```bash
+kubectl create -f net/dhcp-net.yaml
+```
+```bash
+kubectl create -f net/flannel-net.yaml
+```
+
+### Conclusion
+That should be the default k8s setup that uses the university DHCP. If you have any questions reach out to [Haren](haren.eshwaran@bsu.edu) :)
