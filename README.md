@@ -1,5 +1,5 @@
 # k8s
-This repo documents the Kubernetes Cluster deployed through Proxmox for BSU CS
+- This repo documents the Kubernetes Cluster deployed through Proxmox for BSU CS
 
 Below is a simple diagram showing how the cluster works:
 ![diagram](https://github.com/bsucsadmin/k8s/blob/main/docs/diagram.png?raw=true)
