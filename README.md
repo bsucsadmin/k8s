@@ -1,5 +1,8 @@
 # k8s
 This repo documents the Kubernetes Cluster deployed through Proxmox for BSU CS
+
+Below is a simple diagram showing how the cluster works:
+![diagram](https://github.com/bsucsadmin/k8s/blob/main/docs/diagram.png?raw=true)
 ### Installing Kubernetes
 Use this [guide](https://www.cherryservers.com/blog/install-kubernetes-ubuntu) to install your Kubernetes cluster
 - When adding worker nodes you can use the template on `csci-virt-03` to clone new workers and join them to the cluster instead of a full setup
