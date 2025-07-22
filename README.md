@@ -1,8 +1,6 @@
-# k8s
-- This repo documents the Kubernetes Cluster deployed through Proxmox for BSU CS
+# BSU K8s Cluster
+This repository documents the Kubernetes Cluster deployed through Proxmox for Ball State's Computer Science Department.
 
-Below is a simple diagram showing how the cluster works:
-![diagram](https://github.com/bsucsadmin/k8s/blob/main/docs/diagram.png?raw=true)
 ### Installing Kubernetes
 #### Hardware Options
 These are the hardware options in a Proxmox VM:
@@ -46,3 +44,6 @@ kubectl create -f net/flannel-net.yaml
 
 ### Conclusion
 That should be the default k8s setup that uses the university DHCP. If you have any questions reach out to [Haren](mailto:haren.eshwaran@bsu.edu) :)
+
+- A simple diagram showing how the cluster works:
+![diagram](https://github.com/bsucsadmin/k8s/blob/main/docs/diagram.png?raw=true)
